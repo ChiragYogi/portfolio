@@ -28,7 +28,9 @@ export default defineConfig(({ command, mode }) => ({
         client: { files: ["**/server/**"], specifiers: ["server-only"] },
       },
     }),
-    ...(command === "build" ? [nitro({ defaultPreset: "cloudflare-module" })] : []),
+    ...(command === "build"
+      ? [nitro({ defaultPreset: process.env.NETLIFY ? "netlify" : "cloudflare-module" })]
+      : []),
     viteReact(),
   ],
   css: { transformer: "lightningcss" },
