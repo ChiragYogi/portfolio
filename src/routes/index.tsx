@@ -11,7 +11,8 @@ import {
 } from "@/components/portfolio/Sections";
 import { profile } from "@/components/portfolio/data";
 
-const title = "Chirag Goswami — Android Developer (Kotlin, Compose, KMP)";
+const title = "Chirag Goswami";
+const ogTitle = "Chirag Goswami — Android Developer (Kotlin, Compose, KMP)";
 const description =
   "Android developer with 4+ years building POS, payments and consumer apps in Kotlin, Jetpack Compose and Kotlin Multiplatform. 99% crash-free, 40% faster startup.";
 
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title },
       { name: "description", content: description },
-      { property: "og:title", content: title },
+      { property: "og:title", content: ogTitle },
       { property: "og:description", content: description },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
